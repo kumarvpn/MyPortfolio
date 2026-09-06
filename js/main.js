@@ -605,13 +605,28 @@
       }
     }
 
+    const drawerCloseBtn = document.getElementById('nav-drawer-close-btn');
+
     if (hamburger) {
       hamburger.addEventListener('click', toggleMobileNav);
+    }
+
+    if (drawerCloseBtn) {
+      drawerCloseBtn.addEventListener('click', closeMobileNav);
     }
 
     if (navBackdrop) {
       navBackdrop.addEventListener('click', closeMobileNav);
     }
+
+    // Close when tapping anywhere outside the nav drawer
+    document.addEventListener('click', (e) => {
+      if (navMenu && navMenu.classList.contains('open')) {
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+          closeMobileNav();
+        }
+      }
+    });
 
     navLinks.forEach((link) => {
       link.addEventListener('click', closeMobileNav);
