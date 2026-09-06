@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vipin Kumar | Senior .NET & Azure Cloud Architect | GenAI & Agentic AI Specialist</title>
+  <meta name="description"
+    content="Portfolio of Vipin Kumar - Senior Application Developer with 5+ years of experience in C#, .NET Core, Azure Cloud, Microservices, and Generative/Agentic AI systems." />
+  <meta name="keywords"
+    content="Vipin Kumar, .NET Core, Azure, C#, Generative AI, Agentic AI, Cloud Architect, Microservices, Capgemini, Cognizant" />
+  <meta name="author" content="Vipin Kumar" />
+
+  <!-- Favicon Icon SVG -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230078d4'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-weight='900' font-size='50'>VK</text></svg>" />
+
+  <!-- Google Fonts & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Three.js from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Background WebGL 3D Constellation Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Custom Cursor & Trailing Glow Follower -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-badge">VK</div>
+        <div class="brand-name">Vipin<span>.dev</span></div>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills & AI</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#achievements" class="nav-link">Awards & Certs</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Download CV Button in Navbar -->
+        <a href="assets/Vipin_Kumar_Resume.pdf" download="Vipin_Kumar_Resume.pdf" class="btn-cv-nav"
+          id="nav-download-cv" title="Download Vipin Kumar's Resume (PDF)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          <span>Download CV</span>
+        </a>
+
+        <!-- LinkedIn Profile in Navbar -->
+        <a href="https://www.linkedin.com/in/vipin-kumar-1938b9170" target="_blank" rel="noopener noreferrer"
+          class="btn-icon" id="nav-linkedin" title="LinkedIn Profile: Vipin Kumar" aria-label="LinkedIn Profile">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+
+        <!-- Interactive AI Copilot Trigger -->
+        <button class="btn-ai-terminal" id="btn-scroll-ai" title="Launch VipinAI Agent Terminal">
+          <span class="pulse-dot"></span>
+          <span>VipinAI Copilot</span>
+        </button>
+
+        <!-- Sound Synthesizer Toggle -->
+        <button class="btn-icon" id="sound-toggle" title="Toggle UI Synthesizer Sound" aria-label="Toggle Sound">
+          <svg id="sound-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 5L6 9H2v6h4l5 4V5z" />
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+          </svg>
+        </button>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       Hero Section with 3D Cybernetic Hologram Core & Toon Dev Animation
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <!-- Hero Left: Content -->
+      <div class="hero-content-col">
+        <div class="hero-status-badge">
+          <span class="pulse-dot"></span>
+          <span>Available for Senior .NET, Cloud & AI Engineering Roles</span>
+        </div>
+
+        <h1 class="hero-title">
+          Architecting High-Scale Cloud Systems & <span class="gradient-text-ai">Agentic AI</span>
+        </h1>
+
+        <div class="hero-role-wrapper">
+          <span>&gt;&nbsp;</span>
+          <span id="typewriter-text"></span>
+          <span class="typewriter-cursor">&nbsp;</span>
+        </div>
+
+        <p class="hero-desc">
+          Hi, I am <strong>Vipin Kumar</strong>. Experienced application developer with <strong>over 6 years of
+            enterprise expertise</strong> in <strong>C#, .NET Core/8, ASP.NET MVC, Microservices, and Microsoft Azure
+            Cloud</strong>. Delivering resilient distributed architectures, high-availability event-driven systems, and
+          cutting-edge <strong>Generative AI & Agentic AI solutions</strong>.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="assets/Vipin_Kumar_Resume.pdf" download="Vipin_Kumar_Resume.pdf" class="btn btn-cv"
+            id="hero-download-cv" title="Download Vipin Kumar's Full Resume (PDF)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span>Download CV (PDF)</span>
+          </a>
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <a href="#ai-agent-section" class="btn btn-ai">
+            <span>Query VipinAI Agent</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </a>
+          <button class="btn btn-outline btn-copy" data-copy="dev.vipinkumar2@gmail.com" title="Copy Email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+            </svg>
+            <span>Copy Email</span>
+          </button>
+        </div>
+
+        <!-- Social / Quick Contact Strip -->
+        <div class="hero-social-strip">
+          <a href="mailto:dev.vipinkumar2@gmail.com" class="contact-pill-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <span>dev.vipinkumar2@gmail.com</span>
+          </a>
+          <a href="tel:+917782876781" class="contact-pill-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>+91 7782876781</span>
+          </a>
+          <a href="https://github.com/kumarvpn" target="_blank" rel="noopener noreferrer" class="contact-pill-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            <span>github.com/kumarvpn</span>
+          </a>
+          <a href="https://www.linkedin.com/in/vipin-kumar-1938b9170" target="_blank" rel="noopener noreferrer"
+            class="contact-pill-link" title="LinkedIn Profile">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            <span>linkedin/vipin-kumar</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Right: 3D Holographic Cyber-Core Canvas -->
+      <div class="hero-visual-wrapper">
+        <div class="hero-3d-scene-container">
+          <canvas id="hero-3d-canvas"></canvas>
+
+          <!-- Floating Interactive Metric Badges -->
+          <div class="floating-badge badge-top-right">
+            <div class="badge-icon azure">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+              </svg>
+            </div>
+            <div class="badge-text">
+              <span class="badge-val">Azure Specialist</span>
+              <span class="badge-sub">Functions, Bus & Cosmos</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <div class="badge-icon ai">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+            <div class="badge-text">
+              <span class="badge-val">GenAI & Agentic AI</span>
+              <span class="badge-sub">Semantic Kernel & RAG</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-mid-right">
+            <div class="badge-icon star">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <div class="badge-text">
+              <span class="badge-val">2x Top Performer</span>
+              <span class="badge-sub">Highest Rating at Cognizant</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Live Metrics Counter Banner
+       ========================================================================== -->
+  <div class="metrics-banner">
+    <div class="container">
+      <div class="metrics-glass-grid">
+        <div class="metric-item">
+          <div class="metric-number-wrapper">
+            <span class="metric-number" data-target="6">0</span>
+            <span class="metric-symbol">+</span>
+          </div>
+          <span class="metric-label">Years Enterprise Experience</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-number-wrapper">
+            <span class="metric-number" data-target="9">0</span>
+            <span class="metric-symbol">+</span>
+          </div>
+          <span class="metric-label">Mission-Critical & Open Source Projects</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-number-wrapper">
+            <span class="metric-number" data-target="30">0</span>
+            <span class="metric-symbol">%+</span>
+          </div>
+          <span class="metric-label">Security & Efficiency Uplift</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-number-wrapper">
+            <span class="metric-number" data-target="2">0</span>
+            <span class="metric-symbol">x</span>
+          </div>
+          <span class="metric-label">Consecutive Top Rank Awards</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       About Section
+       ========================================================================== */ -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <span class="section-tag">Engineering Philosophy</span>
+      <h2 class="section-title">Bridging Enterprise Stability & <span class="gradient-text-ai">Autonomous
+          Intelligence</span></h2>
+      <p class="section-subtitle">A seasoned backend and cloud architect continuously expanding the frontier of software
+        engineering through AI agents and modern distributed patterns.</p>
+
+      <div class="about-grid">
+        <div class="about-text-col">
+          <p>
+            With more than 5 years of industry experience, I have developed enterprise-grade platforms across
+            <strong>Insurance, FinTech / Accounting, and Food Technology</strong>. My core expertise is rooted in
+            building resilient, high-throughput systems using <strong>C#, .NET Core 8, ASP.NET MVC/Web API, and
+              Microsoft Azure Cloud</strong> services.
+          </p>
+          <p>
+            I believe modern software engineering requires a dual perspective: robust architectural discipline
+            (event-driven microservices, strict data security, and comprehensive xUnit testing) paired with
+            <strong>next-generation AI capabilities</strong>. By integrating <strong>Generative AI & Agentic AI
+              workflows</strong>—powered by tools like Semantic Kernel, Azure OpenAI, and custom autonomous agents—I
+            help teams automate routine cognitive workloads, accelerate code velocity, and achieve operational clarity.
+          </p>
+
+          <div class="about-highlight-box">
+            <h4>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <span>Commitment to Enterprise Reliability & DevOps</span>
+            </h4>
+            <p>
+              Proactive observability with Azure Monitor & Application Insights, automated CI/CD pipelines via Azure
+              DevOps, zero-downtime database migrations, and a rigorous culture of code reviews and developer
+              mentorship.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-cards-col">
+          <div class="info-glass-card">
+            <div class="info-card-header">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+              <div class="info-title">Personal Information</div>
+            </div>
+            <ul class="info-list">
+              <li><span>Full Name</span><span class="val">Vipin Kumar</span></li>
+              <li><span>Current Role</span><span class="val">Consultant at Capgemini</span></li>
+              <li><span>Past Roles</span><span class="val">Cognizant, Outbooks</span></li>
+              <li><span>Home Location</span><span class="val">Jharkhand, Ranchi, India</span></li>
+              <li><span>Work Hub</span><span class="val">Pune / Hybrid</span></li>
+              <li><span>Availability</span><span class="val" style="color: #34d399;">Immediate / Notice Period</span>
+              </li>
+            </ul>
+            <div style="margin-top: 1.25rem;">
+              <a href="assets/Vipin_Kumar_Resume.pdf" download="Vipin_Kumar_Resume.pdf" class="btn btn-outline"
+                style="width: 100%; font-size: 0.85rem; padding: 0.65rem 1rem; border-color: rgba(0, 212, 255, 0.35);">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                <span>Download Official Resume (PDF)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="info-glass-card">
+            <div class="info-card-header">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+              </div>
+              <div class="info-title">Academic Background</div>
+            </div>
+            <ul class="info-list">
+              <li>
+                <span>MCA (Master of Computer Applications)</span>
+                <span class="val">Subharti University (2019-2022)</span>
+              </li>
+              <li>
+                <span>BCA (Bachelor of Computer Applications)</span>
+                <span class="val">Dr C V Raman University (2016-2019)</span>
+              </li>
+              <li>
+                <span>Languages Spoken</span>
+                <span class="val">English (Proficient), Hindi (Native)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Skills & Technology Matrix (Categorized & Visual)
+       ========================================================================== -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <span class="section-tag ai-tag">Technical Arsenal</span>
+      <h2 class="section-title">Core Competencies & <span class="gradient-text-ai">AI Capabilities</span></h2>
+      <p class="section-subtitle">A comprehensive toolkit spanning mission-critical backend architecture, cloud
+        engineering, and autonomous Generative AI workflows.</p>
+
+      <div class="skills-categories-grid">
+        <!-- 1. Generative AI & Agentic AI (Featured Card) -->
+        <div class="skill-category-card featured-ai">
+          <div class="category-header">
+            <div class="category-icon c-ai">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="12 8 8 12 12 16 16 12 12 8" />
+              </svg>
+            </div>
+            <div class="category-title-wrap">
+              <h3>Generative AI & Agentic AI</h3>
+              <span>Autonomous Workflows & Enterprise LLMs</span>
+            </div>
+          </div>
+          <div class="skill-tags-cloud">
+            <span class="skill-pill ai-pill">✨ Agentic AI Workflows</span>
+            <span class="skill-pill ai-pill">⚡ Semantic Kernel</span>
+            <span class="skill-pill ai-pill">🧠 Azure OpenAI Service</span>
+            <span class="skill-pill ai-pill">📚 RAG Architecture</span>
+            <span class="skill-pill ai-pill">🤖 Autonomous Multi-Agents</span>
+            <span class="skill-pill ai-pill">🎯 Prompt Engineering</span>
+            <span class="skill-pill ai-pill">💻 GitHub Copilot Pro</span>
+            <span class="skill-pill ai-pill">🎙️ Voice AI ('Sweety' Assistant)</span>
+            <span class="skill-pill ai-pill">🔍 Vector Embeddings & Hybrid Search</span>
+          </div>
+        </div>
+
+        <!-- 2. Microsoft Azure Cloud Ecosystem -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon c-azure">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+              </svg>
+            </div>
+            <div class="category-title-wrap">
+              <h3>Microsoft Azure Cloud</h3>
+              <span>Distributed Serverless & Messaging</span>
+            </div>
+          </div>
+          <div class="skill-tags-cloud">
+            <span class="skill-pill">Azure Functions</span>
+            <span class="skill-pill">Azure Logic Apps</span>
+            <span class="skill-pill">Azure App Service</span>
+            <span class="skill-pill">Azure Service Bus (Queues/Topics)</span>
+            <span class="skill-pill">Azure Cosmos DB</span>
+            <span class="skill-pill">Azure Data Factory (ADF)</span>
+            <span class="skill-pill">Azure Monitor & App Insights</span>
+            <span class="skill-pill">Azure Key Vault</span>
+            <span class="skill-pill">Azure Storage Accounts</span>
+            <span class="skill-pill">Active Directory / Entra ID</span>
+            <span class="skill-pill">Redis Distributed Cache</span>
+            <span class="skill-pill">API Management (APIM)</span>
+          </div>
+        </div>
+
+        <!-- 3. Programming & Backend Architecture -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon c-net">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <div class="category-title-wrap">
+              <h3>.NET & Backend Engineering</h3>
+              <span>Enterprise Services & Distributed APIs</span>
+            </div>
+          </div>
+          <div class="skill-tags-cloud">
+            <span class="skill-pill">C# (Latest)</span>
+            <span class="skill-pill">.NET 8 / .NET Core</span>
+            <span class="skill-pill">ASP.NET Core Web API</span>
+            <span class="skill-pill">ASP.NET MVC</span>
+            <span class="skill-pill">SignalR (Real-time)</span>
+            <span class="skill-pill">Entity Framework Core</span>
+            <span class="skill-pill">NHibernate</span>
+            <span class="skill-pill">LINQ & Async Await</span>
+            <span class="skill-pill">Worker Services / Background Jobs</span>
+            <span class="skill-pill">Clean Architecture / DDD</span>
+            <span class="skill-pill">RESTful API Design</span>
+            <span class="skill-pill">xUnit & Automated Testing</span>
+          </div>
+        </div>
+
+        <!-- 4. Databases & Data Modeling -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon c-db">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+              </svg>
+            </div>
+            <div class="category-title-wrap">
+              <h3>Databases & Persistence</h3>
+              <span>Relational, NoSQL & Performance Tuning</span>
+            </div>
+          </div>
+          <div class="skill-tags-cloud">
+            <span class="skill-pill">Microsoft SQL Server</span>
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">Azure Cosmos DB (SQL/Core)</span>
+            <span class="skill-pill">Query Optimization & Profiling</span>
+            <span class="skill-pill">Database Indexing Strategies</span>
+            <span class="skill-pill">Stored Procedures & Triggers</span>
+            <span class="skill-pill">Double-Entry Accounting Schemas</span>
+            <span class="skill-pill">Data Migration & Transformation</span>
+          </div>
+        </div>
+
+        <!-- 5. Frontend & Web Scripting -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon c-tools">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <line x1="3" y1="9" x2="21" y2="9" />
+                <line x1="9" y1="21" x2="9" y2="9" />
+              </svg>
+            </div>
+            <div class="category-title-wrap">
+              <h3>Frontend & Scripting</h3>
+              <span>Modern Web & Responsive Interfaces</span>
+            </div>
+          </div>
+          <div class="skill-tags-cloud">
+            <span class="skill-pill">JavaScript (ES6+)</span>
+            <span class="skill-pill">Angular</span>
+            <span class="skill-pill">HTML5 & Semantic Markup</span>
+            <span class="skill-pill">CSS3 & CSS Custom Properties</span>
+            <span class="skill-pill">Tailwind CSS</span>
+            <span class="skill-pill">Bootstrap</span>
+            <span class="skill-pill">jQuery</span>
+            <span class="skill-pill">AJAX & Fetch API</span>
+          </div>
+        </div>
+
+        <!-- 6. DevOps, Tools & Infrastructure -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon c-azure">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+            </div>
+            <div class="category-title-wrap">
+              <h3>DevOps, Tools & IDEs</h3>
+              <span>Automation & Lifecycle Management</span>
+            </div>
+          </div>
+          <div class="skill-tags-cloud">
+            <span class="skill-pill">Azure DevOps Pipelines</span>
+            <span class="skill-pill">CI/CD Automation</span>
+            <span class="skill-pill">Git & GitHub</span>
+            <span class="skill-pill">Visual Studio 2022</span>
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">Postman API Testing</span>
+            <span class="skill-pill">Service Bus Explorer</span>
+            <span class="skill-pill">ServiceNow ITIL</span>
+            <span class="skill-pill">Root Cause Analysis (RCA)</span>
+            <span class="skill-pill">Agile / Scrum Methodologies</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Projects Showcase (Filterable & 3D Interactive)
+       ========================================================================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <span class="section-tag green-tag">Proven Deliverables</span>
+      <h2 class="section-title">Featured Enterprise & <span class="gradient-text-azure">Cloud Projects</span></h2>
+      <p class="section-subtitle">Real-world production engineering spanning event-driven microservices, high-stakes
+        enterprise migrations, FinTech gateways, and AI automation.</p>
+
+      <!-- Category Filters -->
+      <div class="projects-filters">
+        <button class="project-filter-btn active" data-filter="all">All Projects (9)</button>
+        <button class="project-filter-btn" data-filter="ai">GenAI & Agentic AI</button>
+        <button class="project-filter-btn" data-filter="azure">Azure Cloud & Serverless</button>
+        <button class="project-filter-btn" data-filter="migration">Migration & Security</button>
+        <button class="project-filter-btn" data-filter="fintech">FinTech & .NET</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: DocuMind - RAG Chatbot with Qdrant Vector DB -->
+        <div class="project-card featured-ai-project" data-category="ai fintech">
+          <div class="project-top">
+            <span class="project-category-badge ai-badge">RAG & Vector AI</span>
+            <span class="project-date">2026 • Open Source</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">DocuMind — RAG Chatbot with Qdrant Vector DB</h3>
+            <p class="project-desc">
+              High-performance Retrieval-Augmented Generation (RAG) conversational chatbot built with .NET 10 Clean
+              Architecture. Integrates Qdrant vector database via gRPC for dense vector similarity indexing, semantic
+              PDF chunking, and streaming LLM responses.
+            </p>
+            <div class="project-metric-highlight ai-highlight">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+              <span>Sub-second vector retrieval with Qdrant & async streaming (IAsyncEnumerable)</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-tag">.NET 10 / C#</span>
+              <span class="tech-tag">Qdrant Vector DB</span>
+              <span class="tech-tag">RAG Architecture</span>
+              <span class="tech-tag">gRPC Client</span>
+              <span class="tech-tag">Clean Architecture</span>
+              <span class="tech-tag">Embeddings</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn-details" data-proj-id="proj-documind">
+              <span>Architecture Deep Dive</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <a href="https://github.com/kumarvpn/DocuMind" target="_blank" rel="noopener noreferrer"
+              class="project-ext-link" title="View Source on GitHub: github.com/kumarvpn/DocuMind">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Enterprise Agentic AI Platform -->
+        <div class="project-card featured-ai-project" data-category="ai">
+          <div class="project-top">
+            <span class="project-category-badge ai-badge">Agentic AI & GenAI</span>
+            <span class="project-date">2025 - Present</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Autonomous Enterprise AI Agent Platform</h3>
+            <p class="project-desc">
+              Multi-agent orchestration system powered by Semantic Kernel and Azure OpenAI. Automates complex log
+              triage, ticket classification, document RAG, and proactive developer assistance.
+            </p>
+            <div class="project-metric-highlight ai-highlight">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+              <span>45% reduction in incident triage time via multi-agent reasoning</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-tag">Semantic Kernel</span>
+              <span class="tech-tag">Azure OpenAI</span>
+              <span class="tech-tag">.NET 8</span>
+              <span class="tech-tag">RAG / Embeddings</span>
+              <span class="tech-tag">Cosmos DB</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn-details" data-proj-id="proj-agentic">
+              <span>Architecture Deep Dive</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <span class="project-ext-link" title="Enterprise Core">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                <path d="M2 12h20" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Project 2: Blink App Integration -->
+        <div class="project-card" data-category="azure">
+          <div class="project-top">
+            <span class="project-category-badge">Cloud Integration</span>
+            <span class="project-date">02/2025 - 07/2025</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Blink App Community Access Integration</h3>
+            <p class="project-desc">
+              Developed an event-driven architecture integrating third-party community applications for automated access
+              provisioning and real-time state synchronization.
+            </p>
+            <div class="project-metric-highlight green-highlight">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span>Zero-loss event queueing across 10,000+ community user activations</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-tag">Azure Service Bus</span>
+              <span class="tech-tag">Cosmos DB</span>
+              <span class="tech-tag">Worker Services</span>
+              <span class="tech-tag">ASP.NET Core</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn-details" data-proj-id="proj-blink">
+              <span>Architecture Deep Dive</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <span class="project-ext-link" title="Azure Bus">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Project 3: LDAP to LDAPS Migration -->
+        <div class="project-card" data-category="migration">
+          <div class="project-top">
+            <span class="project-category-badge sec-badge">Security & Auth</span>
+            <span class="project-date">10/2025 - 11/2025</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Enterprise LDAP to LDAPS Migration</h3>
+            <p class="project-desc">
+              Secured directory service connectivity by migrating plaintext LDAP to TLS-encrypted LDAPS protocol for
+              organization-wide single sign-on and credential security.
+            </p>
+            <div class="project-metric-highlight green-highlight">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <span>Enhanced data security by 30% via encrypted authentication channel</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-tag">Active Directory</span>
+              <span class="tech-tag">LDAPS / SSL</span>
+              <span class="tech-tag">C# .NET Core</span>
+              <span class="tech-tag">Key Vault</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn-details" data-proj-id="proj-ldap">
+              <span>Architecture Deep Dive</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <span class="project-ext-link" title="Security Protocol">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Project 4: Azure Data Factory Integration -->
+        <div class="project-card" data-category="azure">
+          <div class="project-top">
+            <span class="project-category-badge">Data Engineering</span>
+            <span class="project-date">03/2024 - 07/2024</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Azure Data Factory Real-Time Status Pipeline</h3>
+            <p class="project-desc">
+              Integrated Azure Data Factory to dynamically update activity execution status after processing, enabling
+              automated operational tracking across large ETL batches.
+            </p>
+            <div class="project-metric-highlight green-highlight">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+              <span>Enabled end-to-end operational visibility previously opaque to users</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-tag">Azure Data Factory</span>
+              <span class="tech-tag">Azure Functions</span>
+              <span class="tech-tag">Azure Monitor</span>
+              <span class="tech-tag">SQL Server</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn-details" data-proj-id="proj-adf">
+              <span>Architecture Deep Dive</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <span class="project-ext-link" title="ADF Pipeline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Project 5: MINT Enterprise Migration -->
+        <div class="project-card" data-category="migration">
+          <div class="project-top">
+            <span class="project-category-badge">Cloud Migration</span>
+            <span class="project-date">11/2022 - 03/2023</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">MINT Enterprise Infrastructure Migration</h3>
+            <p class="project-desc">
+              Executed large-scale data migration from AWS NAS shared path to the MEDC shared drive infrastructure.
+              Contributed to .NET MVC development and cross-server firewall networking.
+            </p>
+            <div class="project-metric-highlight green-highlight">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span>Zero data corruption and seamless cross-server transition</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-tag">AWS NAS & MEDC</span>
+              <span class="tech-tag">.NET MVC</span>
+              <span class="tech-tag">Cross-Server Networking</span>
+              <span class="tech-tag">Firewall Rules</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn-details" data-proj-id="proj-mint">
+              <span>Architecture Deep Dive</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <span class="project-ext-link" title="Enterprise Migration">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                <line x1="6" y1="6" x2="6.01" y2="6" />
+                <line x1="6" y1="18" x2="6.01" y2="18" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Project 6: Migration of .NET Core 2.1 to 6.0 -->
+        <div class="project-card" data-category="fintech">
+          <div class="project-top">
+            <span class="project-category-badge">Modernization</span>
+            <span class="project-date">02/2022 - 03/2022</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Migration of .NET Core 2.1 to 6.0</h3>
+            <p class="project-desc">
+              Led the modernization of legacy enterprise software to .NET 6.0, refactoring synchronous blocks into async
+              pipelines and achieving dramatic throughput gains.
+            </p>
+            <div class="project-metric-highlight green-highlight">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+              </svg>
+              <span>35% reduction in CPU overhead and enhanced long-term compatibility</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-tag">.NET 6.0</span>
+              <span class="tech-tag">C# Async/Await</span>
+              <span class="tech-tag">Entity Framework Core</span>
+              <span class="tech-tag">xUnit Testing</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn-details" data-proj-id="proj-netcore">
+              <span>Architecture Deep Dive</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <span class="project-ext-link" title=".NET Architecture">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Project 7: FinTech Multi-Gateway Payment Engine -->
+        <div class="project-card" data-category="fintech">
+          <div class="project-top">
+            <span class="project-category-badge">FinTech & APIs</span>
+            <span class="project-date">03/2020 - 02/2022</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">FinTech Multi-Gateway Payment Engine</h3>
+            <p class="project-desc">
+              Engineered end-to-end payment gateway integrations for accounting SaaS (nomi.co.uk), including TrueLayer
+              (Open Banking), Stripe, Instamojo, Unipaas, and PayPal.
+            </p>
+            <div class="project-metric-highlight green-highlight">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                <line x1="1" y1="10" x2="23" y2="10" />
+              </svg>
+              <span>Seamless automated reconciliation with double-entry bookkeeping ledger</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-tag">TrueLayer / Stripe / PayPal</span>
+              <span class="tech-tag">C# ASP.NET</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">Webhooks</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn-details" data-proj-id="proj-payments">
+              <span>Architecture Deep Dive</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <a href="https://www.nomi.co.uk/" target="_blank" rel="noopener noreferrer" class="project-ext-link"
+              title="Visit Live Platform">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 8: Sweety - AI Voice Desktop Assistant -->
+        <div class="project-card featured-ai-project" data-category="ai">
+          <div class="project-top">
+            <span class="project-category-badge ai-badge">Voice AI Assistant</span>
+            <span class="project-date">Personal Innovation</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Sweety - AI Voice Desktop Assistant</h3>
+            <p class="project-desc">
+              A personal Windows desktop assistant executing natural voice commands to automate 50% of routine computer
+              tasks (copy/paste, application control, automated workflows).
+            </p>
+            <div class="project-metric-highlight ai-highlight">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                <line x1="12" y1="19" x2="12" y2="23" />
+                <line x1="8" y1="23" x2="16" y2="23" />
+              </svg>
+              <span>Handles 50% of daily PC tasks hands-free; +25% e-commerce sales conversion</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-tag">Speech Recognition</span>
+              <span class="tech-tag">Windows API</span>
+              <span class="tech-tag">C# .NET</span>
+              <span class="tech-tag">Automation</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn-details" data-proj-id="proj-sweety">
+              <span>Architecture Deep Dive</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <span class="project-ext-link" title="Voice AI Assistant">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Work Experience Timeline Section
+       ========================================================================== -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <span class="section-tag">Career Trajectory</span>
+      <h2 class="section-title">Enterprise Experience & <span class="gradient-text-azure">Leadership</span></h2>
+      <p class="section-subtitle">Over 6 years of progressive contributions across tier-1 technology consultancies and
+        high-growth software engineering organizations.</p>
+
+      <div class="experience-timeline">
+
+        <!-- Role 1: Capgemini -->
+        <div class="timeline-item active">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Consultant</h3>
+              <span class="timeline-period">01/2025 - Present</span>
+            </div>
+            <div class="timeline-company-row">
+              <span class="company-name">Capgemini Technology Services PVT. LTD</span>
+              <span>•</span>
+              <span class="company-location">Pune, India</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li class="highlight-bullet">
+                <strong>🏆 Client Recognition Award:</strong> Conferred Capgemini's <strong>Certificate of
+                  Appreciation</strong> for <em>Outstanding Contribution in Restaurant Product Development & Deployment
+                  Support</em> on McDonald's enterprise systems (issued by Vijay Gupta, Sr. Director, Capgemini India).
+                <button type="button" class="inline-cert-btn" onclick="openAwardModal()"
+                  title="Inspect Certificate of Appreciation">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    <line x1="11" y1="8" x2="11" y2="14" />
+                    <line x1="8" y1="11" x2="14" y2="11" />
+                  </svg>
+                  <span>View Certificate</span>
+                </button>
+              </li>
+              <li>Designed and developed enterprise-grade applications using .NET Core/MVC and Microsoft Azure services,
+                significantly enhancing system scalability and operational functionality.</li>
+              <li>Integrated and optimized Azure components, ensuring event-driven, decoupled, and secure communication
+                across distributed systems.</li>
+              <li>Developed high-throughput RESTful APIs with ASP.NET Core, boosting interoperability while enforcing
+                high code coverage through thorough xUnit unit test suites.</li>
+              <li>Enhanced application observability and proactively resolved production bottlenecks using Azure Monitor
+                and Application Insights telemetry.</li>
+              <li>Led troubleshooting and root cause analysis (RCA) for mission-critical production incidents related to
+                cloud configurations and code defects.</li>
+              <li>Mentored junior developers on Azure cloud integration patterns, Clean Architecture, and secure coding
+                practices.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2: Cognizant -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Software Engineer</h3>
+              <span class="timeline-period">02/2022 - 01/2025</span>
+            </div>
+            <div class="timeline-company-row">
+              <span class="company-name">Cognizant Technology Solutions PVT. LTD</span>
+              <span>•</span>
+              <span class="company-location">Pune, India</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Engineered, tested, and maintained robust cloud applications using C# and .NET framework, strictly
+                adhering to Azure's enterprise best practices and Well-Architected Framework guidelines.</li>
+              <li>Integrated key Azure services including Azure Functions, Azure Logic Apps, and Azure Service Bus into
+                application backends for scalability, performance optimization, and serverless execution.</li>
+              <li>Configured and managed Azure resources (Storage Accounts, SQL Databases, Key Vaults) and deployed web
+                applications and APIs via Azure App Service with high availability guarantees.</li>
+              <li>Built automated CI/CD build and deployment pipelines using Azure DevOps, reducing release lead time
+                and deployment errors.</li>
+              <li>Awarded the **Highest Performance Rating for 2 consecutive years** and recognized as a **Hero of the
+                Company** for exceptional engineering delivery and R&D.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 3: Outbooks Outsourcing -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role">DotNet Developer</h3>
+              <span class="timeline-period">03/2020 - 02/2022</span>
+            </div>
+            <div class="timeline-company-row">
+              <span class="company-name">Outbooks Outsourcing Pvt. Ltd</span>
+              <span>•</span>
+              <span class="company-location">GuruGram, India</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Collaborated directly with product stakeholders to design software architecture, data models, and API
+                interfaces for cloud accounting platforms.</li>
+              <li>Engineered financial domain features implementing double-entry bookkeeping, general ledger management,
+                chart of accounts, and automated transaction reconciliation.</li>
+              <li>Designed normalized SQL Server database schemas, wrote complex stored procedures, and resolved
+                critical query bottlenecks to optimize performance.</li>
+              <li>Integrated external financial APIs and payment gateways (TrueLayer, Stripe, Instamojo, Unipaas,
+                PayPal) for invoicing, payment links, and fiscal reporting.</li>
+              <li>Maintained code quality, resolved user queries, and pushed continuous bug fixes and patches to
+                production environments.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Key Achievements & Certifications
+       ========================================================================== -->
+  <section class="achievements-section" id="achievements">
+    <div class="container">
+      <span class="section-tag green-tag">Recognition & Credentials</span>
+      <h2 class="section-title">Awards & Verified <span class="gradient-text-azure">Certifications</span></h2>
+      <p class="section-subtitle">Formal industry credentials and corporate accolades demonstrating dedication to
+        technical mastery and exceptional delivery.</p>
+
+      <!-- Honors Cards -->
+      <div class="achievements-grid">
+        <!-- Capgemini × McDonald's Certificate of Appreciation -->
+        <div class="achievement-card capgemini-card" id="card-capgemini-award">
+          <div class="achieve-card-header">
+            <div class="achieve-icon-wrap capgemini">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+              </svg>
+            </div>
+            <div class="achieve-badge-group">
+              <span class="co-badge capgemini">Capgemini</span>
+              <span class="co-badge mcdonalds">McDonald's</span>
+            </div>
+          </div>
+          <div class="award-kicker">Client Excellence Recognition</div>
+          <h3>Certificate of Appreciation</h3>
+          <p class="award-citation">
+            Awarded to <strong>Vipin Kumar</strong> for <strong>Outstanding Contribution in Restaurant Product
+              Development & Deployment Support</strong> across global restaurant systems.
+          </p>
+          <div class="award-signatory">
+            <span>✍️ Signed by <strong>Vijay Gupta</strong>, Sr. Director, Capgemini India</span>
+          </div>
+
+          <!-- Interactive Certificate Thumbnail -->
+          <div class="award-cert-preview" onclick="openAwardModal()" role="button" tabindex="0"
+            aria-label="View Capgemini Certificate of Appreciation">
+            <img src="assets/capgemini-award.png" alt="Capgemini Certificate of Appreciation awarded to Vipin Kumar"
+              class="cert-thumb-img" loading="lazy" />
+            <div class="cert-preview-overlay">
+              <div class="cert-view-cta">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  <line x1="11" y1="8" x2="11" y2="14" />
+                  <line x1="8" y1="11" x2="14" y2="11" />
+                </svg>
+                <span>Click to Inspect Full Certificate</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="award-card-actions">
+            <button type="button" class="btn-cert-trigger" onclick="openAwardModal()">
+              <span>View Certificate</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </button>
+            <a href="assets/capgemini-award.png" download="Vipin_Kumar_Capgemini_Award.png" class="btn-cert-download"
+              title="Download High-Res Certificate">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span>Download</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="achievement-card gold-card">
+          <div class="achieve-icon-wrap gold">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <h3>Consecutive Highest Performance Rating</h3>
+          <p>
+            Received the <strong>highest performance rank for 2 consecutive years</strong> at Cognizant Technology
+            Solutions PVT LTD, placing in the top percentile of software engineering talent.
+          </p>
+        </div>
+
+        <div class="achievement-card emerald-card">
+          <div class="achieve-icon-wrap emerald">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="7" />
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+            </svg>
+          </div>
+          <h3>Hero Of The Company Award</h3>
+          <p>
+            Officially honored as <strong>'HERO OF THE COMPANY'</strong> for doing exceptional work in software
+            engineering, rapid problem resolution, and innovative R&D.
+          </p>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="cert-grid">
+        <div class="cert-card" style="border-color: rgba(157, 78, 221, 0.4);">
+          <div class="cert-badge-img" style="background: rgba(157, 78, 221, 0.2); color: #c084fc;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polygon points="12 8 8 12 12 16 16 12 12 8" />
+            </svg>
+          </div>
+          <div class="cert-info">
+            <h4 style="color: #e0aaff;">AI-102: Microsoft Certified</h4>
+            <p>Azure AI Engineer Associate — Issued by Microsoft</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-badge-img">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+            </svg>
+          </div>
+          <div class="cert-info">
+            <h4>AZ-900: Microsoft Certified</h4>
+            <p>Azure Fundamentals — Issued by Microsoft</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-badge-img">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <div class="cert-info">
+            <h4>OCEAN .NET Core Practitioner</h4>
+            <p>Certified .NET Core Apps Developer — Capgemini</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Interactive VipinAI Agent Terminal
+       ========================================================================== -->
+  <section class="ai-agent-section" id="ai-agent-section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <span class="section-tag ai-tag">Interactive AI Terminal</span>
+        <h2 class="section-title">Query <span class="gradient-text-ai">VipinAI Copilot</span></h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Ask any question about Vipin's experience, .NET & Azure
+          cloud architecture, GenAI & Agentic AI workflows, or interview availability.</p>
+      </div>
+
+      <div class="terminal-wrapper">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+          </div>
+          <div class="terminal-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="4 17 10 11 4 5" />
+              <line x1="12" y1="19" x2="20" y2="19" />
+            </svg>
+            <span>vipin-ai-agent --runtime .NET8-AzureOpenAI-v1.4</span>
+          </div>
+          <div class="terminal-status-tag">
+            <span class="pulse-dot"></span>
+            <span>Agent Active</span>
+          </div>
+        </div>
+
+        <div class="terminal-body" id="terminal-body">
+          <div class="terminal-msg agent">
+            <span class="msg-prefix agent-prefix">vipin-ai:~$</span>
+            <div class="msg-content">
+              Welcome! I am <strong>VipinAI</strong>, an interactive agent trained on Vipin Kumar's 5+ years of
+              enterprise .NET Core, Azure Cloud, and Generative AI experience. Click any suggested query below or type
+              your question!
+            </div>
+          </div>
+        </div>
+
+        <!-- Query Suggestion Chips -->
+        <div class="terminal-chips">
+          <button class="terminal-chip" data-query="download cv">📄 Download CV (PDF)</button>
+          <button class="terminal-chip" data-query="summary">⚡ Quick Summary</button>
+          <button class="terminal-chip" data-query="gen ai">🤖 GenAI & Agentic AI Skills</button>
+          <button class="terminal-chip" data-query="azure">☁️ Azure Cloud Architecture</button>
+          <button class="terminal-chip" data-query="projects">🚀 Blink & LDAP Projects</button>
+          <button class="terminal-chip" data-query="awards">🏆 Cognizant Ratings & Awards</button>
+          <button class="terminal-chip" data-query="contact">📬 Contact & Hire</button>
+          <button class="terminal-chip" data-query="/help">❓ Help Commands</button>
+        </div>
+
+        <!-- Terminal Input Bar -->
+        <div class="terminal-input-bar">
+          <span style="color: #00d4ff; font-family: var(--font-mono);">&gt;</span>
+          <input type="text" id="terminal-input"
+            placeholder="Type a prompt e.g., 'What are his Azure Service Bus and GenAI projects?'" autocomplete="off" />
+          <button class="btn-terminal-send" id="terminal-send">Execute</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contact Section
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <span class="section-tag">Let's Connect</span>
+      <h2 class="section-title">Initiate Collaboration or <span class="gradient-text-azure">Hire Vipin</span></h2>
+      <p class="section-subtitle">Interested in discussing Senior .NET / Azure Cloud engineering or Generative AI agent
+        roles? Reach out directly.</p>
+
+      <div class="contact-grid">
+        <!-- Contact Left: Channels -->
+        <div class="contact-info-card">
+          <div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Direct Channels</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">Feel free to reach out via email, phone, or
+              explore my GitHub repository.</p>
+
+            <div class="contact-channels">
+              <div class="channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                  </div>
+                  <div class="channel-meta">
+                    <span>Email Address</span>
+                    <strong>dev.vipinkumar2@gmail.com</strong>
+                  </div>
+                </div>
+                <button class="btn-copy" data-copy="dev.vipinkumar2@gmail.com" title="Copy Email">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                  </div>
+                  <div class="channel-meta">
+                    <span>Phone / WhatsApp</span>
+                    <strong>+91 7782876781</strong>
+                  </div>
+                </div>
+                <button class="btn-copy" data-copy="+917782876781" title="Copy Phone">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                  </div>
+                  <div class="channel-meta">
+                    <span>GitHub Repository</span>
+                    <strong>github.com/kumarvpn</strong>
+                  </div>
+                </div>
+                <a href="https://github.com/kumarvpn" target="_blank" rel="noopener noreferrer" class="btn-copy"
+                  title="Visit GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon" style="background: rgba(10, 102, 194, 0.15); color: #0077b5;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                      <rect x="2" y="9" width="4" height="12" />
+                      <circle cx="4" cy="4" r="2" />
+                    </svg>
+                  </div>
+                  <div class="channel-meta">
+                    <span>LinkedIn Profile</span>
+                    <strong>vipin-kumar-1938b9170</strong>
+                  </div>
+                </div>
+                <a href="https://www.linkedin.com/in/vipin-kumar-1938b9170" target="_blank" rel="noopener noreferrer"
+                  class="btn-copy" title="Connect on LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <div class="channel-meta">
+                    <span>Primary Locations</span>
+                    <strong>Jharkhand, Ranchi / Pune, India</strong>
+                  </div>
+                </div>
+                <button class="btn-copy" data-copy="Ranchi, Jharkhand, India" title="Copy Location">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <a href="mailto:dev.vipinkumar2@gmail.com?subject=Interview%20Invitation%20-%20Vipin%20Kumar"
+              class="btn btn-primary" style="width: 100%;">
+              <span>Send Direct Email</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Right: Form -->
+        <div class="contact-form-card">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Send a Message</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.75rem;">
+            Leave your project details, hiring requirements, or collaboration idea below:
+          </p>
+
+          <form class="contact-form" id="portfolio-contact-form">
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" placeholder="e.g. Sarah Jenkins (Engineering Recruiter)" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Your Work Email</label>
+              <input type="email" id="contact-email" placeholder="e.g. sjenkins@company.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Opportunity or Project Scope</label>
+              <textarea id="contact-message" rows="5"
+                placeholder="Hi Vipin, we are looking for a Senior .NET / Azure Cloud / GenAI Engineer for an enterprise project..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-ai" style="width: 100%;">
+              <span>Transmit Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Vipin Kumar</h3>
+          <p>Senior Application Developer • .NET & Azure Cloud • Generative & Agentic AI</p>
+        </div>
+
+        <div class="footer-social-links" style="display: flex; gap: 0.75rem; align-items: center;">
+          <a href="https://www.linkedin.com/in/vipin-kumar-1938b9170" target="_blank" rel="noopener noreferrer"
+            class="btn-icon" title="LinkedIn Profile" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="https://github.com/kumarvpn" target="_blank" rel="noopener noreferrer" class="btn-icon"
+            title="GitHub Profile" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </a>
+          <a href="mailto:dev.vipinkumar2@gmail.com" class="btn-icon" title="Email Vipin" aria-label="Email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer-time-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          <span id="live-time">Loading IST...</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Vipin Kumar. Crafted with Semantic HTML5, Vanilla CSS3 & Three.js WebGL. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Project Detail & Architecture Deep Dive Modal
+       ========================================================================== -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+
+      <div style="margin-bottom: 1.5rem;">
+        <span class="project-category-badge" id="modal-category">Category</span>
+        <span id="modal-period"
+          style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-left: 0.75rem;">Period</span>
+        <h3 id="modal-title" style="font-size: 1.8rem; margin-top: 0.75rem;">Project Title</h3>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 1.05rem; color: var(--azure-cyan); margin-bottom: 0.5rem;">Overview & Problem Statement
+        </h4>
+        <p id="modal-summary" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;"></p>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 1.05rem; color: #c084fc; margin-bottom: 0.5rem;">System Architecture Diagram</h4>
+        <pre class="arch-box" id="modal-architecture"></pre>
+      </div>
+
+      <div>
+        <h4 style="font-size: 1.05rem; color: #34d399; margin-bottom: 0.5rem;">Business Impact & Outcomes</h4>
+        <p id="modal-impact" style="color: var(--text-primary); font-size: 0.95rem; font-weight: 500;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Capgemini Award Certificate Lightbox Modal
+       ========================================================================== -->
+  <div class="modal-backdrop" id="award-modal" role="dialog" aria-modal="true" aria-labelledby="award-modal-title">
+    <div class="modal-card award-modal-card">
+      <button class="modal-close-btn" id="award-modal-close-btn" aria-label="Close Certificate Modal"
+        onclick="closeAwardModal()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+
+      <div class="award-modal-header">
+        <div class="award-modal-badges">
+          <span class="co-badge capgemini">Capgemini</span>
+          <span class="co-badge mcdonalds">McDonald's</span>
+          <span class="co-badge status">Verified Corporate Award</span>
+        </div>
+        <h3 id="award-modal-title">Certificate of Appreciation</h3>
+        <p class="award-modal-subtitle">For Outstanding Contribution in Restaurant Product Development & Deployment
+          Support</p>
+      </div>
+
+      <div class="award-modal-image-wrapper">
+        <img src="assets/capgemini-award.png" alt="Capgemini Certificate of Appreciation awarded to Vipin Kumar"
+          class="award-modal-img" />
+      </div>
+
+      <div class="award-modal-info-grid">
+        <div class="award-info-tile">
+          <span class="award-info-label">Honoree</span>
+          <span class="award-info-val">Vipin Kumar</span>
+        </div>
+        <div class="award-info-tile">
+          <span class="award-info-label">Employer</span>
+          <span class="award-info-val">Capgemini Technology Services PVT. LTD</span>
+        </div>
+        <div class="award-info-tile">
+          <span class="award-info-label">Client Engagement</span>
+          <span class="award-info-val">McDonald's Restaurant Systems</span>
+        </div>
+        <div class="award-info-tile">
+          <span class="award-info-label">Signatory</span>
+          <span class="award-info-val">Vijay Gupta (Sr. Director, Capgemini India)</span>
+        </div>
+      </div>
+
+      <div class="award-modal-footer">
+        <a href="assets/capgemini-award.png" download="Vipin_Kumar_Capgemini_Award.png" class="btn btn-cv">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          <span>Download Certificate (PNG)</span>
+        </a>
+        <a href="assets/capgemini-award.png" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+          <span>Open Full Resolution</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notification" id="toast-notification">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+      <polyline points="22 4 12 14.01 9 11.01" />
+    </svg>
+    <span id="toast-message">Message copied!</span>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="js/three-scene.js"></script>
+  <script src="js/ai-agent.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

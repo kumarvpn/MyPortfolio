@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vipin Kumar - Resume</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm 15mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      color: #1e293b;
+      line-height: 1.4;
+      font-size: 9.5pt;
+      background: #fff;
+    }
+    .resume-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    /* Header */
+    .header {
+      border-bottom: 2px solid #0078d4;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .name-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .name {
+      font-size: 20pt;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+    .role {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #0078d4;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 4px;
+      font-size: 8.5pt;
+      color: #475569;
+    }
+    .contact-bar a {
+      color: #0078d4;
+      text-decoration: none;
+    }
+    /* Summary */
+    .summary-box {
+      background: #f8fafc;
+      border-left: 3px solid #0078d4;
+      padding: 6px 10px;
+      margin-bottom: 12px;
+      font-size: 8.8pt;
+      color: #334155;
+      line-height: 1.45;
+    }
+    /* 2-Column Grid Layout */
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 63% 35%;
+      gap: 15px;
+    }
+    /* Section Headings */
+    h2.section-header {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+    /* Experience */
+    .job-item {
+      margin-bottom: 10px;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .job-title {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .job-dates {
+      font-size: 8pt;
+      font-weight: 600;
+      color: #0078d4;
+    }
+    .job-company {
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 3px;
+    }
+    .job-desc {
+      font-size: 8.2pt;
+      color: #64748b;
+      margin-bottom: 4px;
+      font-style: italic;
+    }
+    ul.bullet-list {
+      padding-left: 14px;
+    }
+    ul.bullet-list li {
+      font-size: 8.2pt;
+      color: #334155;
+      margin-bottom: 2.5px;
+      line-height: 1.35;
+    }
+    /* Projects */
+    .project-item {
+      margin-bottom: 8px;
+    }
+    .project-title {
+      font-size: 8.8pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .project-dates {
+      font-size: 7.5pt;
+      color: #64748b;
+    }
+    .project-desc {
+      font-size: 8pt;
+      color: #334155;
+      margin-top: 1px;
+    }
+    /* Skills Sidebar */
+    .skill-group {
+      margin-bottom: 9px;
+    }
+    .skill-group-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #0078d4;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .skill-tags {
+      font-size: 8pt;
+      color: #334155;
+      line-height: 1.35;
+    }
+    /* Achievements & Certifications */
+    .highlight-card {
+      background: #f1f5f9;
+      border-radius: 4px;
+      padding: 5px 8px;
+      margin-bottom: 6px;
+    }
+    .highlight-card strong {
+      font-size: 8.3pt;
+      color: #0f172a;
+      display: block;
+    }
+    .highlight-card span {
+      font-size: 7.8pt;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+
+<div class="resume-container">
+  <!-- Header -->
+  <header class="header">
+    <div class="name-title">
+      <h1 class="name">VIPIN KUMAR</h1>
+      <span class="role">Senior Application Developer | .NET, Azure & GenAI</span>
+    </div>
+    <div class="contact-bar">
+      <span>📞 +91 7782876781</span>
+      <span>✉️ <a href="mailto:dev.vipinkumar2@gmail.com">dev.vipinkumar2@gmail.com</a></span>
+      <span>💼 <a href="https://www.linkedin.com/in/vipin-kumar-1938b9170">linkedin.com/in/vipin-kumar-1938b9170</a></span>
+      <span>🌐 <a href="https://github.com/kumarvpn">github.com/kumarvpn</a></span>
+      <span>📍 Jharkhand, Ranchi / Pune, India</span>
+    </div>
+  </header>
+
+  <!-- Summary -->
+  <div class="summary-box">
+    <strong>Professional Summary:</strong> Experienced .NET Developer with over 5 years of hands-on experience in C#, .NET Core/8, ASP.NET MVC, and Microsoft Azure cloud services. Skilled in designing scalable, secure, and high-performing microservices using RESTful APIs, Azure Service Bus, Cosmos DB, and SQL Server. Specialized in <strong>Generative AI & Agentic AI workflows</strong> (Semantic Kernel, Azure OpenAI, RAG architectures, GitHub Copilot). Proven track record delivering mission-critical applications across Insurance, FinTech, and Food industry domains with an emphasis on CI/CD automation, DevOps best practices, and zero-downtime operations.
+  </div>
+
+  <!-- Main 2-Column Grid -->
+  <div class="grid-layout">
+    <!-- Left Column: Experience & Projects -->
+    <div class="col-left">
+      <h2 class="section-header">Professional Experience</h2>
+
+      <!-- Capgemini -->
+      <div class="job-item">
+        <div class="job-header">
+          <span class="job-title">Consultant</span>
+          <span class="job-dates">01/2025 - Present</span>
+        </div>
+        <div class="job-company">Capgemini Technology Services PVT. LTD | Pune, India</div>
+        <div class="job-desc">Global leader in consulting, technology services, and digital transformation.</div>
+        <ul class="bullet-list">
+          <li>Conferred <strong>Certificate of Appreciation</strong> by Capgemini leadership for <strong>Outstanding Contribution in Restaurant Product Development & Deployment Support</strong> (McDonald's client engagement).</li>
+          <li>Designed and developed enterprise-grade applications using .NET Core/MVC and Microsoft Azure services, enhancing scalability and system functionality.</li>
+          <li>Integrated and optimized Azure components, ensuring event-driven and secure communication across distributed microservices.</li>
+          <li>Developed RESTful APIs with ASP.NET Core, improving system performance and interoperability while enforcing high code coverage through xUnit tests.</li>
+          <li>Enhanced application observability and resolved production bottlenecks proactively via Azure Monitor and Application Insights.</li>
+          <li>Led troubleshooting and root cause analysis (RCA) for critical production incidents related to cloud configurations and code defects.</li>
+          <li>Mentored junior developers on Azure integration patterns and secure coding standards.</li>
+        </ul>
+      </div>
+
+      <!-- Cognizant -->
+      <div class="job-item">
+        <div class="job-header">
+          <span class="job-title">Software Engineer</span>
+          <span class="job-dates">02/2022 - 01/2025</span>
+        </div>
+        <div class="job-company">Cognizant Technology Solutions PVT. LTD | Pune, India</div>
+        <div class="job-desc">Enterprise software solutions and cloud architecture consultancy.</div>
+        <ul class="bullet-list">
+          <li>Wrote, tested, and maintained applications using C# and .NET framework adhering strictly to Azure's best practices and Well-Architected guidelines.</li>
+          <li>Created and managed Azure resources (Storage Accounts, SQL Databases, Key Vaults) and deployed APIs using Azure App Service with high availability.</li>
+          <li>Integrated serverless and messaging services including Azure Functions, Logic Apps, and Azure Service Bus for asynchronous scalability.</li>
+          <li>Configured automated CI/CD build and release pipelines using Azure DevOps.</li>
+          <li>Recognized as <strong>Top Performer (Highest Performance Rating for 2 consecutive years)</strong> and awarded <strong>'Hero of the Company'</strong> for R&D.</li>
+        </ul>
+      </div>
+
+      <!-- Outbooks -->
+      <div class="job-item">
+        <div class="job-header">
+          <span class="job-title">DotNet Developer</span>
+          <span class="job-dates">03/2020 - 02/2022</span>
+        </div>
+        <div class="job-company">Outbooks Outsourcing Pvt. Ltd | GuruGram, India</div>
+        <div class="job-desc">Provider of accounting software solutions and financial platforms.</div>
+        <ul class="bullet-list">
+          <li>Architected data models, modules, and API interfaces for cloud accounting software ensuring adherence to double-entry bookkeeping and ledger principles.</li>
+          <li>Designed normalized SQL Server schemas, implemented stored procedures, and eliminated query performance bottlenecks.</li>
+          <li>Integrated external financial APIs and payment gateways (TrueLayer, Stripe, PayPal, Instamojo, Unipaas) for automated invoicing and reconciliation.</li>
+        </ul>
+      </div>
+
+      <h2 class="section-header">Key Enterprise & AI Projects</h2>
+      <div class="project-item">
+        <div class="project-title">DocuMind — RAG Engine with Qdrant Vector DB <span class="project-dates">(2026 • Open Source)</span></div>
+        <div class="project-desc">Engineered an end-to-end RAG chatbot using .NET 10 Clean Architecture. Integrated Qdrant vector database via gRPC for dense embeddings, semantic PDF chunking, and streaming LLM responses. (github.com/kumarvpn/DocuMind)</div>
+      </div>
+      <div class="project-item">
+        <div class="project-title">Autonomous Enterprise AI Agent Platform <span class="project-dates">(2025 - Present)</span></div>
+        <div class="project-desc">Designed an autonomous multi-agent orchestration layer leveraging Semantic Kernel, Azure OpenAI (GPT-4o), and Cosmos DB. Automated alert log triage (-45% time) and document RAG.</div>
+      </div>
+      <div class="project-item">
+        <div class="project-title">Blink App Community Access Integration <span class="project-dates">(02/2025 - 07/2025)</span></div>
+        <div class="project-desc">Developed an event-driven architecture integrating third-party community applications for automated access provisioning using Azure Service Bus, Cosmos DB, and Worker Services.</div>
+      </div>
+      <div class="project-item">
+        <div class="project-title">LDAP to LDAPS Security Migration <span class="project-dates">(10/2025 - 11/2025)</span></div>
+        <div class="project-desc">Secured enterprise directory connectivity by migrating to encrypted LDAPS, boosting data security by 30% through certificate-backed TLS authentication.</div>
+      </div>
+      <div class="project-item">
+        <div class="project-title">Azure Data Factory Pipeline Integration <span class="project-dates">(03/2024 - 07/2024)</span></div>
+        <div class="project-desc">Integrated ADF to auto-update activity execution status in real-time, delivering complete end-to-end operational visibility across complex ETL stages.</div>
+      </div>
+    </div>
+
+    <!-- Right Column: Skills, Education, Certifications, Awards -->
+    <div class="col-right">
+      <h2 class="section-header">Technical Skills</h2>
+
+      <div class="skill-group">
+        <div class="skill-group-title">GenAI & Agentic AI</div>
+        <div class="skill-tags">Agentic Workflows, Semantic Kernel, Azure OpenAI, Qdrant Vector DB, RAG Architecture, Autonomous Multi-Agents, Prompt Engineering, GitHub Copilot.</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Cloud (Microsoft Azure)</div>
+        <div class="skill-tags">Azure Functions, Azure Logic Apps, Azure App Service, Azure Service Bus, Cosmos DB, Azure Data Factory, Azure Monitor, Key Vault, Redis Cache, APIM, CI/CD Pipelines.</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Programming & Backend</div>
+        <div class="skill-tags">C#, .NET 8 / .NET Core, ASP.NET Core (MVC / Web API / Worker Jobs), SignalR, Entity Framework Core, NHibernate, LINQ, Microservices, xUnit Testing.</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Databases</div>
+        <div class="skill-tags">Microsoft SQL Server, PostgreSQL, Cosmos DB, Query Optimization, Indexing, Stored Procedures.</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Frontend & Web</div>
+        <div class="skill-tags">JavaScript, TypeScript, Angular, HTML5, CSS3, Tailwind CSS, Bootstrap, jQuery, AJAX.</div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Tools & DevOps</div>
+        <div class="skill-tags">Azure DevOps, Git, Visual Studio, VS Code, Postman, Service Bus Explorer, ServiceNow.</div>
+      </div>
+
+      <h2 class="section-header">Achievements</h2>
+      <div class="highlight-card">
+        <strong>🏆 Certificate of Appreciation (Capgemini)</strong>
+        <span>Awarded for Outstanding Contribution in Restaurant Product Development & Deployment Support (McDonald's engagement).</span>
+      </div>
+      <div class="highlight-card">
+        <strong>⭐ Highest Performance Rating</strong>
+        <span>Ranked top performer for 2 consecutive years in Cognizant Technology Solutions.</span>
+      </div>
+      <div class="highlight-card">
+        <strong>🎖️ Hero Of The Company</strong>
+        <span>Recognized for exceptional software development, problem solving, and innovative R&D.</span>
+      </div>
+
+      <h2 class="section-header">Certifications</h2>
+      <div class="highlight-card">
+        <strong>📜 AI-102: Azure AI Engineer Associate</strong>
+        <span>Microsoft Certified</span>
+      </div>
+      <div class="highlight-card">
+        <strong>📜 AZ-900: Azure Fundamentals</strong>
+        <span>Microsoft Certified</span>
+      </div>
+      <div class="highlight-card">
+        <strong>📜 OCEAN .NET Core Practitioner</strong>
+        <span>Capgemini Certified</span>
+      </div>
+
+      <h2 class="section-header">Education</h2>
+      <div class="highlight-card">
+        <strong>MCA (Master of Computer Applications)</strong>
+        <span>Subharti University (11/2019 - 04/2022)</span>
+      </div>
+      <div class="highlight-card">
+        <strong>BCA (Bachelor of Computer Applications)</strong>
+        <span>Dr C V Raman University (05/2016 - 04/2019)</span>
+      </div>
+
+      <h2 class="section-header">Languages</h2>
+      <div class="skill-tags">English (Proficient), Hindi (Native)</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
