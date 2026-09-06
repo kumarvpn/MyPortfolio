@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vipin Kumar - Resume</title>
   <style>
     @page {
@@ -174,6 +175,85 @@
     .highlight-card span {
       font-size: 7.8pt;
       color: #475569;
+    }
+
+    /* Mobile Responsive Screen Styles */
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 16px 14px;
+        font-size: 10pt;
+        line-height: 1.5;
+        background: #f8fafc;
+      }
+      .resume-container {
+        width: 100%;
+        max-width: 100%;
+        background: #ffffff;
+        padding: 16px 14px;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      }
+      .name-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .name {
+        font-size: 18pt;
+        line-height: 1.2;
+      }
+      .role {
+        font-size: 10.5pt;
+      }
+      .contact-bar {
+        flex-direction: column;
+        gap: 6px;
+        font-size: 9pt;
+      }
+      .grid-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+      }
+      .job-dates {
+        font-size: 8.5pt;
+      }
+      ul.bullet-list {
+        padding-left: 18px;
+      }
+      ul.bullet-list li {
+        font-size: 9pt;
+        line-height: 1.45;
+        margin-bottom: 5px;
+      }
+      .project-item {
+        margin-bottom: 12px;
+      }
+      .project-title {
+        font-size: 9.5pt;
+      }
+      .project-desc {
+        font-size: 8.8pt;
+        line-height: 1.4;
+      }
+      .skill-tags {
+        font-size: 8.8pt;
+        line-height: 1.45;
+      }
+      .highlight-card {
+        padding: 8px 10px;
+        margin-bottom: 8px;
+      }
+      .highlight-card strong {
+        font-size: 9pt;
+      }
+      .highlight-card span {
+        font-size: 8.5pt;
+      }
     }
   </style>
 </head>

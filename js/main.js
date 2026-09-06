@@ -578,18 +578,55 @@
       });
     });
 
-    // Mobile Hamburger
+    // Mobile Hamburger & Drawer Controls
     const hamburger = document.getElementById('hamburger-btn');
     const navMenu = document.getElementById('nav-menu');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    const mobileAiTrigger = document.getElementById('btn-mobile-ai');
 
-    if (hamburger && navMenu) {
-      hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('open');
-      });
-      navLinks.forEach((link) => {
-        link.addEventListener('click', () => {
-          navMenu.classList.remove('open');
-        });
+    function closeMobileNav() {
+      if (navMenu) navMenu.classList.remove('open');
+      if (hamburger) hamburger.classList.remove('active');
+      if (navBackdrop) navBackdrop.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function toggleMobileNav() {
+      if (!navMenu || !hamburger) return;
+      playTone(520, 'sine', 0.06, 0.03);
+      const isOpen = navMenu.classList.contains('open');
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        navMenu.classList.add('open');
+        hamburger.classList.add('active');
+        if (navBackdrop) navBackdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    if (hamburger) {
+      hamburger.addEventListener('click', toggleMobileNav);
+    }
+
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', closeMobileNav);
+    }
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', closeMobileNav);
+    });
+
+    if (mobileAiTrigger) {
+      mobileAiTrigger.addEventListener('click', () => {
+        closeMobileNav();
+        playTone(720, 'sine', 0.08, 0.04);
+        const termSec = document.getElementById('ai-agent-section');
+        if (termSec) {
+          termSec.scrollIntoView({ behavior: 'smooth' });
+          const termInput = document.getElementById('terminal-input');
+          if (termInput) setTimeout(() => termInput.focus(), 600);
+        }
       });
     }
 
