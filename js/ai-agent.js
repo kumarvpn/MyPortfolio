@@ -73,6 +73,16 @@ It includes his full .NET Core, Azure Cloud, and GenAI/Agentic AI experience at 
 - **Real-Time Streaming**: Server-Sent Events (SSE) streaming live thought signatures and tool trace aggregators.`
     },
     {
+      keywords: ['gcp', 'google cloud', 'compute engine', 'bigquery', 'iis', 'cloud migration', 'load balancer'],
+      response: `☁️ **Azure to Google Cloud (GCP) .NET Enterprise Migration:**
+- **Workload**: Mission-critical enterprise .NET web applications & microservices migrated from Microsoft Azure to Google Cloud Platform (GCP).
+- **Compute Engine (VM)**: Windows Server instances deployed in multi-zone Managed Instance Groups (MIGs) with automated health checks, auto-healing, and persistent SSD storage.
+- **IIS Web Server**: Automated Internet Information Services (IIS) setup, tuned application pools, URL Rewrite, ARR, and ASP.NET Core runtime hosting with TLS 1.3.
+- **Google BigQuery**: High-speed streaming ingestion of application telemetry and audit logs using the \`Google.Cloud.BigQuery.V2\` .NET SDK with partitioned/clustered tables.
+- **Cloud Load Balancing**: External Global Application Load Balancer with Google-managed SSL certificates, multi-zone failover, and Cloud Armor WAF security.
+- **Networking & Security**: Custom VPC design, private subnets, Cloud Router, Cloud NAT for secure egress without public IPs, and Private Google Access.`
+    },
+    {
       keywords: ['documind', 'qdrant', 'vector', 'rag chatbot', 'document ai'],
       response: `🧠 **DocuMind — Enterprise RAG & Vector Intelligence:**
 - **Repository**: [github.com/kumarvpn/DocuMind](https://github.com/kumarvpn/DocuMind)
@@ -82,18 +92,19 @@ It includes his full .NET Core, Azure Cloud, and GenAI/Agentic AI experience at 
 - **Streaming Response**: Real-time asynchronous token streaming via \`IAsyncEnumerable<string>\` for interactive conversational Q&A.`
     },
     {
-      keywords: ['projects', 'blink', 'ldap', 'mint', 'payment', 'sweety', 'data factory', 'migration'],
+      keywords: ['projects', 'blink', 'ldap', 'mint', 'payment', 'sweety', 'data factory', 'migration', 'gcp'],
       response: `🚀 **Key Enterprise & Open Source Projects:**
 1. **Yukti (युक्ति)**: Enterprise SRE & Incident Copilot with .NET 8, Semantic Kernel, Qdrant Cloud & Hybrid LLMs ([Live App](https://yukti.runasp.net/)).
 2. **DocuMind**: RAG chatbot with Qdrant vector DB & .NET 10 Clean Architecture ([GitHub](https://github.com/kumarvpn/DocuMind)).
 3. **Autonomous Enterprise AI Agent Platform**: Semantic Kernel & Azure OpenAI multi-agent system.
 4. **Blink App Integration**: Event-driven access provisioning with Azure Service Bus & Cosmos DB.
-5. **LDAP to LDAPS Migration**: Enhanced enterprise security posture by **30%** via encrypted authentication.
-6. **Data Factory Pipeline**: Automated real-time processing status tracking for operational transparency.
-7. **MINT Enterprise Migration**: High-volume migration from AWS NAS to MEDC shared infrastructure.
-8. **.NET Core 2.1 to 6.0/8**: Complete modernization of legacy systems for high throughput.
-9. **Multi-Gateway Payment Engine**: Integrated TrueLayer, Stripe, PayPal, Instamojo for nomi.co.uk.
-10. **Sweety Voice AI**: Windows AI personal assistant automating 50% of routine PC tasks.`
+5. **Azure to Google Cloud (GCP) .NET Migration**: Enterprise zero-downtime migration via Compute Engine, IIS, BigQuery, Global Cloud LB & VPC.
+6. **LDAP to LDAPS Migration**: Enhanced enterprise security posture by **30%** via encrypted authentication.
+7. **Data Factory Pipeline**: Automated real-time processing status tracking for operational transparency.
+8. **MINT Enterprise Migration**: High-volume migration from AWS NAS to MEDC shared infrastructure.
+9. **.NET Core 2.1 to 6.0/8**: Complete modernization of legacy systems for high throughput.
+10. **Multi-Gateway Payment Engine**: Integrated TrueLayer, Stripe, PayPal, Instamojo for nomi.co.uk.
+11. **Sweety Voice AI**: Windows AI personal assistant automating 50% of routine PC tasks.`
     },
     {
       keywords: ['achievement', 'award', 'rating', 'hero', 'recognition', 'certifications', 'cert', 'capgemini award', 'mcdonalds', 'appreciation'],

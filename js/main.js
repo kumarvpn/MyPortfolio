@@ -298,6 +298,49 @@
 [Azure Cosmos DB] (User Record)    [External Auth / IAM Callback]`,
       impact: 'Achieved zero data loss during high-traffic bursts, enabling instant automated provisioning across 10,000+ users.'
     },
+    'proj-gcp-migration': {
+      title: 'Azure to Google Cloud (GCP) .NET Enterprise Migration',
+      category: 'Cloud Infrastructure & Enterprise Migration',
+      period: '2024 - 2025 • Enterprise Migration',
+      summary: `Architected, provisioned, and executed the zero-downtime migration of enterprise .NET production workloads from Microsoft Azure to Google Cloud Platform (GCP), establishing resilient infrastructure with Compute Engine, IIS, BigQuery analytics, and advanced networking.
+
+🛠️ Key Implementation Pillars:
+• Compute Engine VM Setup & Configuration: Right-sized Windows Server instances deployed in Managed Instance Groups (MIGs) across multiple Availability Zones with auto-healing, custom startup scripts, persistent SSDs, and dedicated IAM service accounts.
+• High-Performance IIS Web Server Hosting: Configured Internet Information Services (IIS) on Windows Server VMs, optimizing application pools, worker processes, ARR (Application Request Routing), URL Rewrite rules, and ASP.NET Core hosting bundles with TLS 1.3 certificates.
+• Google BigQuery Data Warehouse Integration: Configured BigQuery datasets, partitioned & clustered tables, and integrated the Google Cloud BigQuery .NET SDK (Google.Cloud.BigQuery.V2) for high-throughput streaming ingestion of operational telemetry, audit trails, and analytical transactions.
+• Google Cloud Load Balancing & Security: Implemented External Global Application Load Balancer with Google-managed SSL/TLS certificates, cross-zone health checks, session affinity, and Cloud Armor WAF protection against DDoS and web application attacks.
+• Secure VPC Network Architecture: Designed custom multi-tier Virtual Private Cloud (VPC) topology featuring isolated subnets, Cloud Router, Cloud NAT for secure outbound updates without public IPs, Private Google Access, and restrictive VPC firewall rules.`,
+      architecture: `[Global End Users / API Consumers]
+               │
+               ▼ (HTTPS :443 / Google-Managed SSL Termination)
+[Google Cloud External Application Load Balancer (Global HTTPS LB)]
+├── Cloud Armor WAF (Layer 7 Defense, Rate Limiting & OWASP Rules)
+├── Multi-Zone Backend Service & Health Checks (:80 / :443)
+└── Anycast Global Virtual IP & Edge PoPs
+               │
+═══════════════╪══════════════════════════════════════════════════════════
+[Google Cloud Virtual Private Cloud (VPC) - Multi-Tier Custom Subnets]
+               │
+     ┌─────────┴──────────────────────────────┐
+     ▼ (Zone: us-central1-a)                  ▼ (Zone: us-central1-b)
+[Compute Engine Windows VM (MIG)]        [Compute Engine Windows VM (MIG)]
+├── Hardened Windows Server 2022         ├── Hardened Windows Server 2022
+├── IIS Web Server Cluster               ├── IIS Web Server Cluster
+│    ├── Optimized App Pools (CLR/Core)  │    ├── Optimized App Pools (CLR/Core)
+│    ├── URL Rewrite & ARR Routing       │    ├── URL Rewrite & ARR Routing
+│    └── HTTPS Bindings & TLS 1.3        │    └── HTTPS Bindings & TLS 1.3
+└── Enterprise .NET Web Application      └── Enterprise .NET Web Application
+     │                                        │
+     └────────────────────┬───────────────────┘
+                          │ (Private Google Access / Cloud NAT Egress)
+                          ▼
+[Google BigQuery Analytical Data Warehouse]
+├── Google.Cloud.BigQuery.V2 .NET Client Library
+├── Streaming API Ingestion (Transactions, Logs, Telemetry)
+├── Time-Partitioned & Clustered Columnar Storage
+└── Real-Time Executive Dashboards & Operational BI`,
+      impact: 'Delivered a seamless zero-unplanned-downtime migration from Azure to GCP, reducing monthly infrastructure expenditures by 28%, cutting p99 response latencies by 22% via Global Cloud Load Balancing, and empowering data teams with real-time BigQuery telemetry streaming.'
+    },
     'proj-ldap': {
       title: 'Enterprise LDAP to LDAPS Security Migration',
       category: 'Security & Infrastructure',
