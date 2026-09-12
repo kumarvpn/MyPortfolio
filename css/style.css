@@ -1251,6 +1251,31 @@ h6 {
   border-color: rgba(16, 185, 129, 0.35);
 }
 
+.live-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #34d399;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  transition: var(--transition-smooth);
+}
+
+.live-status-badge:hover {
+  background: rgba(16, 185, 129, 0.25);
+  border-color: rgba(16, 185, 129, 0.6);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
 .project-date {
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -2371,6 +2396,47 @@ h6 {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: #e2e8f0;
+}
+
+.modal-actions-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.modal-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(0, 212, 255, 0.12);
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  color: var(--azure-cyan);
+  transition: var(--transition-smooth);
+}
+
+.modal-link-btn:hover {
+  background: rgba(0, 212, 255, 0.25);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
+
+.modal-link-btn.live-link {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
+.modal-link-btn.live-link:hover {
+  background: rgba(16, 185, 129, 0.3);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
 }
 
 /* Toast Notifications */

@@ -173,10 +173,65 @@
      5. Project Filtering & Architecture Modals
      ========================================================================== */
   const projectDetails = {
+    'proj-yukti': {
+      title: 'Yukti (युक्ति) — Enterprise SRE & Incident Copilot',
+      category: 'Enterprise SRE & Agentic AI',
+      period: '2026 • Live Production Web App',
+      liveUrl: 'https://yukti.runasp.net/',
+      summary: `Meet Yukti (Sanskrit for "strategic ingenuity / remedy") — an intelligent, enterprise-grade SRE AI Agent built from the ground up to accelerate Mean Time to Recovery (MTTR) and automate incident response.
+
+🛠️ What Yukti Brings to Incident Management:
+• Semantic Incident RAG: Indexes past outages, root causes, and post-mortems in Qdrant Cloud. When latency spikes or pool exhaustion occurs, Yukti instantly retrieves matching historical cases and synthesizes a structured 5-Phase Playbook (Impact, RCA, Immediate Mitigation, Long-Term Remediation, and Preventive Observability).
+• Hybrid Dual-Model Architecture: High-speed cloud reasoning via Groq & Google Gemini (GPT-OSS 120B / Gemini Flash) for complex playbooks alongside local edge privacy via Ollama (qwen3:8b) with zero cloud data egress.
+• Unified 768d Vector Embeddings: Dual engine support featuring Google Gemini Embeddings (with Matryoshka Representation Learning) and local offline nomic-embed-text via Ollama, complete with an interactive vector verification sandbox.
+• Ingestion Studio & Bulk Importers: Ingest single incidents, bulk JSON arrays, or upload full Excel (.xlsx) spreadsheets with schema validation and real-time dense vector generation.
+• Human-in-the-Loop (HITL) Jira Operations: Directly queries, triages, and creates Jira incident tickets via native tool calls — with strict cryptographic approval tokens safeguarding destructive actions like ticket deletion.
+• Automated Executive Reporting: On-the-fly generation and export of incident catalogs and remediation playbooks to multi-sheet Excel (.xlsx via ClosedXML) and formatted PDF reports (via QuestPDF).
+• Specialized IT Guardrails: Enforces domain-specific guardrails to ensure the agent focuses strictly on IT, DevOps, SRE, databases, and infrastructure.
+• Real-time Streaming: Server-Sent Events (SSE) with live thought signatures and tool trace aggregators.`,
+      architecture: `[Incident Ingestion Studio (Web UI, JSON Arrays, Excel .xlsx)]
+           │
+           ▼
+    [Unified 768d Embedding Engine]
+    ├── Google Gemini Embeddings (Matryoshka Representation Learning)
+    └── Local Offline nomic-embed-text (Ollama)
+           │
+           ▼ (Dense Vector Indexing & Verification Sandbox)
+    [Qdrant Cloud Vector DB (768d Cosine Similarity Index)]
+           │
+           ▼ (Top-K Semantic Retrieval of Historical Outages & RCAs)
+    [Semantic Kernel 1.80 Orchestrator & IT Domain Guardrails]
+    ├── Native SRE Tool Calling & Reasoning Pipeline
+    ├── HITL Jira Operations (Cryptographic Token Approval)
+    └── Real-Time SSE Streamer (Thought Signatures & Tool Traces)
+           │
+      ┌────┴────────────────────────────────────────┐
+      ▼ (Cloud Reasoning)                           ▼ (Edge Privacy / On-Prem)
+ [Groq & Google Gemini]                      [Local Ollama: qwen3:8b]
+ (GPT-OSS 120B / Gemini Flash)               (Zero Cloud Data Egress)
+      │                                             │
+      └────┬────────────────────────────────────────┘
+           │
+           ▼
+    [Structured 5-Phase Remediation Playbook]
+    ├── Phase 1: Business & Technical Impact Assessment
+    ├── Phase 2: Root Cause Analysis (RCA)
+    ├── Phase 3: Immediate Mitigation Action Plan
+    ├── Phase 4: Long-Term Systemic Remediation
+    └── Phase 5: Preventive Observability & Telemetry
+           │
+      ┌────┴────────────────────────────────────────┐
+      ▼                                             ▼
+ [Executive Reporting Engine]               [Yukti Live Copilot Web App]
+ • QuestPDF (Formatted PDF Playbooks)       (https://yukti.runasp.net/)
+ • ClosedXML (Multi-Sheet .xlsx Export)`,
+      impact: 'Dramatically reduces Mean Time to Recovery (MTTR) by synthesizing past post-mortems into actionable 5-phase playbooks within seconds, while guaranteeing data sovereignty via on-prem local LLMs and cryptographic safety for Jira operations.'
+    },
     'proj-documind': {
       title: 'DocuMind — RAG Engine with Qdrant Vector DB',
       category: 'Generative AI & Vector Search',
       period: '2026 • Open Source',
+      repoUrl: 'https://github.com/kumarvpn/DocuMind',
       summary: 'High-performance Retrieval-Augmented Generation (RAG) conversational chatbot application engineered with .NET 10 Clean Architecture. Uses Qdrant as the primary vector database for dense embedding indexation and similarity search, combined with PDF semantic chunking and asynchronous streaming response generation.',
       architecture: `[Document Ingestion (PDF Upload)]
           │
@@ -405,6 +460,37 @@
         modalSummary.textContent = data.summary;
         modalArch.textContent = data.architecture;
         modalImpact.textContent = data.impact;
+
+        const modalLinks = document.getElementById('modal-links');
+        if (modalLinks) {
+          modalLinks.innerHTML = '';
+          if (data.liveUrl) {
+            const liveA = document.createElement('a');
+            liveA.href = data.liveUrl;
+            liveA.target = '_blank';
+            liveA.rel = 'noopener noreferrer';
+            liveA.className = 'modal-link-btn live-link';
+            liveA.innerHTML = `
+              <span class="pulse-dot" style="width: 6px; height: 6px;"></span>
+              <span>Launch Live Web App ↗</span>
+            `;
+            modalLinks.appendChild(liveA);
+          }
+          if (data.repoUrl) {
+            const repoA = document.createElement('a');
+            repoA.href = data.repoUrl;
+            repoA.target = '_blank';
+            repoA.rel = 'noopener noreferrer';
+            repoA.className = 'modal-link-btn';
+            repoA.innerHTML = `
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              <span>GitHub Repository ↗</span>
+            `;
+            modalLinks.appendChild(repoA);
+          }
+        }
 
         modalBackdrop.classList.add('active');
         document.body.style.overflow = 'hidden';

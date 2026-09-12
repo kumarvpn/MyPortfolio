@@ -58,6 +58,21 @@ It includes his full .NET Core, Azure Cloud, and GenAI/Agentic AI experience at 
    - FinTech & accounting platforms, double-entry bookkeeping, multi-payment gateway integrations (Stripe, TrueLayer, PayPal).`
     },
     {
+      keywords: ['yukti', 'sre', 'incident', 'remediation', 'copilot', 'qdrant rag'],
+      response: `💡 **Yukti (युक्ति) — Enterprise SRE & Incident Remediation Copilot:**
+- **Live Web App**: [yukti.runasp.net](https://yukti.runasp.net/)
+- **Core Purpose**: Sanskrit for *"strategic ingenuity / remedy"* — an intelligent SRE AI Agent built from the ground up to drastically accelerate Mean Time to Recovery (MTTR) and automate enterprise incident response.
+- **Backend & Orchestration**: C# | .NET 8 Web API | Microsoft Semantic Kernel 1.80.
+- **Vector Database**: Qdrant Cloud (768-dimensional Cosine similarity) indexing historical outages and post-mortems.
+- **5-Phase Remediation Playbook**: Synthesizes structured playbooks: Impact, RCA, Immediate Mitigation, Long-Term Remediation, and Preventive Observability.
+- **Hybrid Dual-Model Reasoning**: Cloud inference via Groq & Google Gemini (GPT-OSS 120B / Gemini Flash) + Edge Privacy via local Ollama (\`qwen3:8b\`) with zero data egress.
+- **Unified 768d Embeddings**: Dual engine support with Google Gemini Embeddings (Matryoshka Representation Learning) and local \`nomic-embed-text\`, plus vector verification sandbox.
+- **Ingestion Studio**: Ingest single incidents, bulk JSON arrays, or multi-tab Excel (\`.xlsx\`) files with schema validation.
+- **HITL Jira Operations**: Triages and creates Jira tickets via native tool calls guarded by cryptographic approval tokens.
+- **Executive Reporting**: Dynamic export to multi-sheet Excel (\`ClosedXML\`) and executive PDF reports (\`QuestPDF\`).
+- **Real-Time Streaming**: Server-Sent Events (SSE) streaming live thought signatures and tool trace aggregators.`
+    },
+    {
       keywords: ['documind', 'qdrant', 'vector', 'rag chatbot', 'document ai'],
       response: `🧠 **DocuMind — Enterprise RAG & Vector Intelligence:**
 - **Repository**: [github.com/kumarvpn/DocuMind](https://github.com/kumarvpn/DocuMind)
@@ -69,15 +84,16 @@ It includes his full .NET Core, Azure Cloud, and GenAI/Agentic AI experience at 
     {
       keywords: ['projects', 'blink', 'ldap', 'mint', 'payment', 'sweety', 'data factory', 'migration'],
       response: `🚀 **Key Enterprise & Open Source Projects:**
-1. **DocuMind**: RAG chatbot with Qdrant vector DB & .NET 10 Clean Architecture ([GitHub](https://github.com/kumarvpn/DocuMind)).
-2. **Autonomous Enterprise AI Agent Platform**: Semantic Kernel & Azure OpenAI multi-agent system.
-3. **Blink App Integration**: Event-driven access provisioning with Azure Service Bus & Cosmos DB.
-4. **LDAP to LDAPS Migration**: Enhanced enterprise security posture by **30%** via encrypted authentication.
-5. **Data Factory Pipeline**: Automated real-time processing status tracking for operational transparency.
-6. **MINT Enterprise Migration**: High-volume migration from AWS NAS to MEDC shared infrastructure.
-7. **.NET Core 2.1 to 6.0/8**: Complete modernization of legacy systems for high throughput.
-8. **Multi-Gateway Payment Engine**: Integrated TrueLayer, Stripe, PayPal, Instamojo for nomi.co.uk.
-9. **Sweety Voice AI**: Windows AI personal assistant automating 50% of routine PC tasks.`
+1. **Yukti (युक्ति)**: Enterprise SRE & Incident Copilot with .NET 8, Semantic Kernel, Qdrant Cloud & Hybrid LLMs ([Live App](https://yukti.runasp.net/)).
+2. **DocuMind**: RAG chatbot with Qdrant vector DB & .NET 10 Clean Architecture ([GitHub](https://github.com/kumarvpn/DocuMind)).
+3. **Autonomous Enterprise AI Agent Platform**: Semantic Kernel & Azure OpenAI multi-agent system.
+4. **Blink App Integration**: Event-driven access provisioning with Azure Service Bus & Cosmos DB.
+5. **LDAP to LDAPS Migration**: Enhanced enterprise security posture by **30%** via encrypted authentication.
+6. **Data Factory Pipeline**: Automated real-time processing status tracking for operational transparency.
+7. **MINT Enterprise Migration**: High-volume migration from AWS NAS to MEDC shared infrastructure.
+8. **.NET Core 2.1 to 6.0/8**: Complete modernization of legacy systems for high throughput.
+9. **Multi-Gateway Payment Engine**: Integrated TrueLayer, Stripe, PayPal, Instamojo for nomi.co.uk.
+10. **Sweety Voice AI**: Windows AI personal assistant automating 50% of routine PC tasks.`
     },
     {
       keywords: ['achievement', 'award', 'rating', 'hero', 'recognition', 'certifications', 'cert', 'capgemini award', 'mcdonalds', 'appreciation'],

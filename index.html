@@ -615,7 +615,7 @@
 
       <!-- Category Filters -->
       <div class="projects-filters">
-        <button class="project-filter-btn active" data-filter="all">All Projects (9)</button>
+        <button class="project-filter-btn active" data-filter="all">All Projects (10)</button>
         <button class="project-filter-btn" data-filter="ai">GenAI & Agentic AI</button>
         <button class="project-filter-btn" data-filter="azure">Azure Cloud & Serverless</button>
         <button class="project-filter-btn" data-filter="migration">Migration & Security</button>
@@ -624,7 +624,64 @@
 
       <div class="projects-grid">
 
-        <!-- Project 1: DocuMind - RAG Chatbot with Qdrant Vector DB -->
+        <!-- Project 1: Yukti - Enterprise SRE & Incident Remediation Copilot -->
+        <div class="project-card featured-ai-project" data-category="ai azure">
+          <div class="project-top">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="project-category-badge ai-badge">Agentic SRE & RAG</span>
+              <a href="https://yukti.runasp.net/" target="_blank" rel="noopener noreferrer"
+                class="live-status-badge"
+                title="Open Live Web App: yukti.runasp.net" aria-label="Launch Yukti Live Web App">
+                <span class="pulse-dot" style="width: 6px; height: 6px;"></span>
+                <span>LIVE APP ↗</span>
+              </a>
+            </div>
+            <span class="project-date">2026 • Live Production</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Yukti (युक्ति) — Enterprise SRE Copilot</h3>
+            <p class="project-desc">
+              Enterprise SRE & Incident Remediation Copilot powered by .NET 8, Semantic Kernel, and Qdrant Cloud Vector RAG.
+              Accelerates MTTR by indexing past outages and post-mortems, synthesizing 5-phase actionable playbooks, and
+              executing human-in-the-loop (HITL) Jira operations with hybrid cloud & local reasoning.
+            </p>
+            <div class="project-metric-highlight ai-highlight">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+              <span>Sub-second MTTR incident RAG with 5-phase automated playbooks & SSE streaming</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-tag">.NET 8 Web API</span>
+              <span class="tech-tag">Semantic Kernel 1.80</span>
+              <span class="tech-tag">Qdrant Cloud RAG</span>
+              <span class="tech-tag">Groq & Gemini Flash</span>
+              <span class="tech-tag">Local Ollama (qwen3:8b)</span>
+              <span class="tech-tag">HITL Jira Tools</span>
+              <span class="tech-tag">ClosedXML & QuestPDF</span>
+              <span class="tech-tag">SSE Streaming</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn-details" data-proj-id="proj-yukti">
+              <span>Architecture Deep Dive</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <a href="https://yukti.runasp.net/" target="_blank" rel="noopener noreferrer"
+              class="project-ext-link" title="Launch Live Web App: yukti.runasp.net" aria-label="Launch Yukti Live Web App">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: DocuMind - RAG Chatbot with Qdrant Vector DB -->
         <div class="project-card featured-ai-project" data-category="ai fintech">
           <div class="project-top">
             <span class="project-category-badge ai-badge">RAG & Vector AI</span>
@@ -1595,16 +1652,21 @@
       </button>
 
       <div style="margin-bottom: 1.5rem;">
-        <span class="project-category-badge" id="modal-category">Category</span>
-        <span id="modal-period"
-          style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-left: 0.75rem;">Period</span>
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <span class="project-category-badge" id="modal-category">Category</span>
+            <span id="modal-period"
+              style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-left: 0.75rem;">Period</span>
+          </div>
+          <div id="modal-links" style="display: flex; gap: 0.5rem; flex-wrap: wrap;"></div>
+        </div>
         <h3 id="modal-title" style="font-size: 1.8rem; margin-top: 0.75rem;">Project Title</h3>
       </div>
 
       <div style="margin-bottom: 1.5rem;">
         <h4 style="font-size: 1.05rem; color: var(--azure-cyan); margin-bottom: 0.5rem;">Overview & Problem Statement
         </h4>
-        <p id="modal-summary" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;"></p>
+        <p id="modal-summary" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; white-space: pre-line;"></p>
       </div>
 
       <div style="margin-bottom: 1.5rem;">
